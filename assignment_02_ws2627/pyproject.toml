@@ -1,0 +1,33 @@
+[project]
+name = "nlp-uebung"
+version = "0.1.0"
+description = "Exercise track (Ubung) for 344.175 VL Natural Language Processing"
+requires-python = ">=3.10"
+
+# Core packages: Assignments 1 and 2.
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scipy>=1.13",
+    "matplotlib>=3.8",
+    "scikit-learn>=1.5",
+    "nltk>=3.9",
+    "certifi>=2024.7.4",
+    "jupyterlab>=4.2",
+    "ipywidgets>=8.1",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+# Heavy packages: Assignments 3 and 4.
+# Install with:  uv sync --extra deep
+deep = [
+    "torch>=2.3",
+    "transformers>=4.49,<6",
+    "pillow>=10",
+    "datasets>=2.20",
+    "gensim>=4.3",
+]
+
+[tool.uv]
+package = false
